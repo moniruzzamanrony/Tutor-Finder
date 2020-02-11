@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c9957cc0-e1b7-40ef-9890-cb0895787c0a" name="apachi" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\Onliner Tutor Finder\html" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

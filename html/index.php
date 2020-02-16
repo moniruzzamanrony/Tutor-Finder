@@ -14,18 +14,18 @@
   <nav class="navbar bg-info">
     <div class="container-fluid">
       <div class="navbar-header">
-          <a class="navbar-brand web_logo" href="#"><span style="color: red">Tutor</span> Finder</a>
+          <a class="navbar-brand web_logo" href="index.php"><span style="color: red">Tutor</span> Finder</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Newsfeed</a></li>
+        <li class="active"><a href="index.php">Newsfeed</a></li>
         <li><a href="search.php">Search Tutor</a></li>
-        <li><a href="#">Post</a></li>
-        <li><a href="#">Connect</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="add-post.php">Post</a></li>
+        <li><a href="connect.php">Connect</a></li>
+        <li><a href="about.php">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="signUp.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </nav>
@@ -38,7 +38,7 @@
 
 <!--                Tutor Post Card-->
                 <div class="card-block">
-                    <h4 class="card-title font-weight-bold">Monirozzaman Roni</h4>
+                    <h4 class="card-title font-weight-bold">Hasibul Hasan</h4>
                     <small class="text-info">11 months ago</small> | <small class="text-info">21 february,2101</small>
                     <table class="table table-hover">
                         <tbody>

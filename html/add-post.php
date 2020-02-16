@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="../js/script.js"></script>
 </head>
 <body>
 <!-- navbar -->
@@ -37,7 +36,7 @@
         <div class="row ">
             <form class="form-horizontal" action="/action_page.php">
                 <div class="form-group ">
-                    <h1 class="text-center text-info">Search Tutor</h1>
+                    <h1 class="text-center text-info">Post</h1>
                     <label class="control-label col-sm-3 groupForm" for="email">Subject :</label>
                     <div class="col-sm-8 groupForm">
                         <select class="form-control" id="sel1">
@@ -94,7 +93,15 @@
                         </select>
                     </div>
                 </div>
+                <label class="control-label col-sm-3" for="email">As :</label>
+                <div class="col-sm-8">
+                    <select class="form-control" id="sel1">
+                        <option>Student</option>
+                        <option>Teacher</option>
 
+                    </select>
+                </div>
+        </div>
                 <div class="col-sm-12">
                     <button type="button" class="btn btn-primary srcBut">Search</button>
                 </div>

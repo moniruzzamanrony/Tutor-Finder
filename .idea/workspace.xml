@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fd7f295-0d40-48d6-bd09-13f21ae029e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/css/signup-css.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/add-post.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/signUp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/signup-css.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/add-post.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/add-post.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,8 +75,21 @@
       <workItem from="1581455492929" duration="76000" />
       <workItem from="1581455582938" duration="6543000" />
       <workItem from="1581530369207" duration="45000" />
-      <workItem from="1581876727355" duration="2268000" />
+      <workItem from="1581876727355" duration="2337000" />
+      <workItem from="1581971854454" duration="3090000" />
+      <workItem from="1582308930878" duration="423000" />
+      <workItem from="1582501513709" duration="296000" />
+      <workItem from="1582504493887" duration="10000" />
+      <workItem from="1582504528469" duration="1405000" />
     </task>
+    <task id="LOCAL-00001" summary="add Design">
+      <created>1581879050061</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581879050061</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,5 +107,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add Design" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Design" />
   </component>
 </project>

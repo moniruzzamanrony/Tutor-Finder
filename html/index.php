@@ -32,51 +32,73 @@
 <!--Main Body Of Page-->
 <div class="container">
 <div class="container">
+<?php
+
+include 'connect.php';
+
+
+
+$sql = "SELECT * FROM post";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {?>
+
     <div class="card float-left">
+      <?php while($row = $result->fetch_assoc())
+              {?>
         <div class="row ">
             <div class="col-sm-9">
 
 <!--                Tutor Post Card-->
-                <div class="card-block">
-                    <h4 class="card-title font-weight-bold">Hasibul Hasan</h4>
-                    <small class="text-info">11 months ago</small> | <small class="text-info">21 february,2101</small>
+             
+                <div class="card-block m">
+                    <h4 class="card-title font-weight-bold"><?php  echo "" . $row["name"]. " ";?></h4>
+                    <small class="text-info"><?php  echo "" . $row["timedate"]. " ";?></small> | <small class="text-info text-danger"><?php   echo "As a " . $row["type"]. "";?></small>
+                     
                     <table class="table table-hover">
                         <tbody>
                         <tr>
                             <td>Subject</td>
-                            <td>bangla</td>
+                            <td><?php  echo "" . $row["subject"]. " ";?></td>
                         </tr>
                         <tr>
                             <td>Class</td>
-                            <td>11-12</td>
+                            <td><?php  echo "" . $row["class"]. " ";?></td>
                         </tr>
                         <tr>
                             <td>Medium</td>
-                            <td>Bangla</td>
+                            <td><?php  echo "" . $row["medium"]. " ";?></td>
                         </tr>
                         <tr>
                             <td>salary</td>
-                            <td>1000-2000</td>
+                            <td><?php  echo "" . $row["srange"]. " ";?></td>
 
                         </tr>
                         <tr>
                             <td>Location</td>
-                            <td>Banani</td>
+                            <td><?php  echo "" . $row["location"]. " ";?></td>
                         </tr>
                         <tr>
                             <td>Preferred University</td>
-                            <td>DIU</td>
+                            <td><?php  echo "" . $row["university"]. " ";?></td>
                         </tr>
                         </tbody>
                     </table>
-                    <a href="#" class="btn btn-success btn-sm">Apply Now</a>
+                    <a href="check-logged.php?page=index.php" class="btn btn-success btn-sm">Apply Now</a>
                 </div>
+         
             </div>
 
             <div class="col-sm-3">
                 <img class="avatar" src="../images/profile-avater.png" alt="">
             </div>
         </div>
+           <?php }
+} else {
+    echo "No Post Found Now";
+}
+$conn->close();
+?>
     </div>
 
 

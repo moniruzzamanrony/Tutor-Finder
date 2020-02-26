@@ -133,7 +133,6 @@
 </body>
 </html>
 <?php
-include 'config.php';
 include 'connect.php';
 
 if (isset($_POST['submit'])) {
@@ -145,8 +144,8 @@ if (isset($_POST['submit'])) {
     $university= $_POST['university'];
     $as= $_POST['as'];
     $currentTime = date("Y-m-d H:i:s");
-    $sql = "INSERT INTO post (userid,class, medium, srange,location,university,type,subject,timedate)
-VALUES ('13','$class','$medium','$sRange','$location','$university','$as','$subject','$currentTime')";
+    $sql = "INSERT INTO post (name,class, medium, srange,location,university,type,subject,timedate)
+VALUES ('Monirozzaman Roni','$class','$medium','$sRange','$location','$university','$as','$subject','$currentTime')";
 
 if ($conn->query($sql) === TRUE) {?>
     <script> location.replace("index.php"); </script>

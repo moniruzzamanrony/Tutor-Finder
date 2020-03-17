@@ -37,7 +37,7 @@
         <div class="row ">
     <form class="form-horizontal" action="search.php" method="POST">
                 <div class="form-group ">
-                    <h1 class="text-center text-info">Post</h1>
+                    <h1 class="text-center text-info">Search</h1>
                     <label class="control-label col-sm-3 groupForm" for="email">Subject :</label>
                     <div class="col-sm-8 groupForm">
                         <select class="form-control" id="subject" name="subject">
@@ -104,7 +104,7 @@
 
         </div>
         <div class="col-sm-12">
-            <input type="submit" name="submit" value="Post now" class="btn btn-primary srcBut"/>
+            <input type="submit" name="submit" value="Search now" class="btn btn-primary srcBut"/>
         </div>
     </div>
     </form>
@@ -115,9 +115,7 @@
 <!--Footer-->
 <div class="fixedPositionInBelow">
     <footer>
-        <div class="footer bg-info" id="footer">
-
-
+        <div class="bg-info">
             <div class="footer-bottom text-center">
                 <div class="container">
                     <p class=" copyright"> Copyright © <span style="color: red">Tutor</span> Finder- 2020. All right

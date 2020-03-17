@@ -1,3 +1,5 @@
+https://stackoverflow.com/questions/1545357/how-to-check-if-a-user-is-logged-in-in-php
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +11,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
+
 <body>
 <!-- navbar -->
   <nav class="navbar bg-info">
@@ -30,7 +34,7 @@
     </div>
   </nav>
 <!--Main Body Of Page-->
-<div class="container">
+
 <div class="container">
 <?php
 
@@ -100,21 +104,15 @@ if ($result->num_rows > 0) {?>
 $conn->close();
 ?>
     </div>
-
-
 </div>
-
-<br>
-<br>
-
 <!--Footer-->
-<div class="fixedPositionInBelow">
+<div class="fooertWeight">
     <footer>
-        <div class="footer bg-info" id="footer">
+        <div class="bg-info">
 
 
             <div class="footer-bottom text-center">
-                <div class="container">
+                <div>
                     <p class=" copyright"> Copyright © <span style="color: red">Tutor</span> Finder- 2020. All right reserved. </p>
 
                 </div>

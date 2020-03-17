@@ -115,7 +115,7 @@
 <!--Footer-->
 <div class="fixedPositionInBelow">
     <footer>
-        <div class="footer bg-info" id="footer">
+        <div class="bg-info">
 
 
             <div class="footer-bottom text-center">

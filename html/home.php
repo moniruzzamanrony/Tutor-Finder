@@ -27,8 +27,9 @@
         <li><a href="about.php">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="signUp.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="signUp.php"><span class="glyphicon glyphicon-user"></span><?php session_start();
+        echo $_SESSION['userName']; ?></a></li>
+        <li><a href="index.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -36,13 +37,12 @@
 
 <div class="container">
 <?php
-session_start();
-session_destroy();
+
 include 'connect.php';
 
 
 
-$sql = "SELECT * FROM post WHERE isApprove = true";
+$sql = "SELECT * FROM post";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {?>
@@ -88,7 +88,7 @@ if ($result->num_rows > 0) {?>
                         </tr>
                         </tbody>
                     </table>
-                    <a href="check-logged.php?page=login.php" class="btn btn-success btn-sm">Apply Now</a>
+                    <a href="check-logged.php?page=index.php" class="btn btn-success btn-sm">Apply Now</a>
                 </div>
          
             </div>

@@ -42,7 +42,7 @@
                     <div class="col-sm-8 groupForm">
                         <select class="form-control" id="subject" name="subject">
                             <option value="English">English</option>
-                            <option value="MathMath">Math</option>
+                            <option value="Math">Math</option>
                             <option value="Physics">Physics</option>
                             <option value="Biology">Biology</option>
                         </select>
@@ -134,8 +134,10 @@
 </html>
 <?php
 include 'connect.php';
-
+session_start();
 if (isset($_POST['submit'])) {
+if (isset($_SESSION['userId']) && $_SESSION['loggedin'] == true) {
+
     $class = $_POST['classes'];
     $subject = $_POST['subject'];
     $medium= $_POST['medium'];
@@ -143,12 +145,14 @@ if (isset($_POST['submit'])) {
     $location= $_POST['location'];
     $university= $_POST['university'];
     $as= $_POST['as'];
+    $userName= $_SESSION['userName'];
+    $userId= $_SESSION['userId'];
     $currentTime = date("Y-m-d H:i:s");
-    $sql = "INSERT INTO post (name,class, medium, srange,location,university,type,subject,timedate)
-VALUES ('Monirozzaman Roni','$class','$medium','$sRange','$location','$university','$as','$subject','$currentTime')";
+    $sql = "INSERT INTO post (name,class, medium, srange,location,university,type,subject,timedate,isApprove,userId)
+               VALUES ('$userName','$class','$medium','$sRange','$location','$university','$as','$subject','$currentTime',false,'$userId')";
 
 if ($conn->query($sql) === TRUE) {?>
-    <script> location.replace("index.php"); </script>
+    <script> location.replace("home.php"); </script>
    <?php
 } else {
     echo 'Something is wrong';
@@ -156,6 +160,12 @@ if ($conn->query($sql) === TRUE) {?>
 
 $conn->close();
 
-}
 
+
+} else {
+     ?>
+         <script> location.replace("login.php"); </script>
+     <?php
+}
+}
 ?>

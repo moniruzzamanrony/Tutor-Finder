@@ -36,13 +36,22 @@
 
 <div class="container">
 <?php
-session_start();
-session_destroy();
+
 include 'connect.php';
+if (isset($_POST['submit'])) {
+    $class = $_POST['classes'];
+    $subject = $_POST['subject'];
+    $medium= $_POST['medium'];
+    $sRange= $_POST['sRange'];
+    $location= $_POST['location'];
+    $university= $_POST['university'];
+    $as= $_POST['as'];
+    $currentTime = date("Y-m-d H:i:s");
+   
 
 
-
-$sql = "SELECT * FROM post WHERE isApprove = true";
+}
+$sql = "SELECT * FROM post WHERE class = '$class' AND subject='$subject' AND medium='$medium' AND srange='$sRange' AND location='$location' AND university='$university'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {?>

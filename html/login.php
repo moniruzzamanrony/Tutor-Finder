@@ -107,10 +107,14 @@ if (isset($_POST['submit'])) {
         $row = mysqli_fetch_assoc($res);
 
          $userId = $row['userId'];
+         $userName = $row['name'];
          session_start();
           $_SESSION['loggedin'] = true;
           $_SESSION['userId'] = $userId;
-              
+           $_SESSION['userName'] = $userName;
+           ?>
+         <script> location.replace("home.php"); </script>
+              <?php
      $conn->close();
 }
 else

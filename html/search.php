@@ -35,7 +35,7 @@
 
     <div class="card float-left">
         <div class="row ">
-    <form class="form-horizontal" action="search.php" method="POST">
+    <form class="form-horizontal" action="search-results.php" method="POST">
                 <div class="form-group ">
                     <h1 class="text-center text-info">Search</h1>
                     <label class="control-label col-sm-3 groupForm" for="email">Subject :</label>

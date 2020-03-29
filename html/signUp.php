@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+   <title>Online Tutor Finder</title>
+  <link rel="icon" href="../images/teacher.png" type="image/icon type">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -10,7 +11,6 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<!-- navbar -->
   <nav class="navbar bg-info">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -29,10 +29,9 @@
       </ul>
     </div>
   </nav>
-<!--Main Body Of Page-->
-<div class="container">
 
-<div class="d-flex justify-content-center h-100">
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
     <div class="card">
       <div class="card-header">
         <h3>Sign Up</h3>
@@ -75,63 +74,51 @@
     </div>
   </div>
 </div>
-<!--Footer-->
+
 <div class="fixedPositionInBelow">
-    <footer>
-        <div class="footer bg-info" id="footer">
-
-
-            <div class="footer-bottom text-center">
-                <div class="container">
-                    <p class=" copyright"> Copyright © <span style="color: red">Tutor</span> Finder- 2020. All right reserved. </p>
-
-                </div>
+<footer>
+    <div class="bg-info">
+        <div class="footer-bottom text-center">
+            <div class="container">
+                <p class=" copyright"> Copyright © <span style="color: red">Tutor</span> Finder- 2020. All right
+                    reserved. </p>
             </div>
-            <!--/.footer-bottom-->
-    </footer>
+        </div>
+    </div>
+</footer>
 </div>
-
 </body>
 </html>
 
+
 <?php
 include 'connect.php';
-
 if (isset($_POST['submit'])) {
-
     $name = $_POST['name'];
     $mail = $_POST['mail'];
     $password= md5($_POST['password']);  
     $uid= uniqid(); 
 
-     $sql="select * from user where email='$mail';";
-
-      $res=mysqli_query($conn,$sql);
-
-      if (mysqli_num_rows($res) > 0) {
-
-        $row = mysqli_fetch_assoc($res);
-        if($mail==$row['email'])
+    $sql="select * from user where email='$mail';";
+    $res=mysqli_query($conn,$sql);
+    if (mysqli_num_rows($res) > 0) {
+      $row = mysqli_fetch_assoc($res);
+      if($mail==$row['email'])
         {
-            echo 
-            "<script type='text/javascript'>alert('Email already exists');</script>";
-          
-       } 
-    
-
+          echo "<script type='text/javascript'>alert('Email already exists');</script>";
+        }   
 }
 else{ 
-
-         $sql = "INSERT INTO user (userId,name, email, password)
-        VALUES ('$uid','$name','$mail','$password')";
-
-        if ($conn->query($sql) === TRUE) {?>
-            <script> location.replace("login.php"); </script>
-           <?php
-        } else {
-              echo "<script type='text/javascript'>alert('Something is worng');</script>";
-        }
-        }
+  
+    $sql = "INSERT INTO user (userId,name, email, password)
+    VALUES ('$uid','$name','$mail','$password')";
+    if ($conn->query($sql) === TRUE) {?>
+        <script> location.replace("login.php"); </script>
+       <?php
+    } else {
+          echo "<script type='text/javascript'>alert('Something is worng');</script>";
+    }
+  }
 }
- $conn->close();
+$conn->close();
 ?>

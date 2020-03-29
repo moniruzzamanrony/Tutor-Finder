@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap');
 @import "font-awesome.min.css";
 @import "font-awesome-ie7.min.css";
-/* Space out content a bit */
+
+body {
+    background-color:  #eee;
+}
 .web_logo{
     font-family: 'Odibee Sans', cursive;
     font-size: 30px;
@@ -16,41 +19,13 @@
     clear: both;
     display: block;
 }
-.footer {
 
-    height: auto;
-    padding-bottom: 30px;
-    position: relative;
-    width: 100%;
-    border-bottom: 1px solid #CCCCCC;
-    border-top: 1px solid #DDDDDD;
-}
-.fooertWeight{
-    width: 100%;
-}
+
 
 .email{
     border-bottom: 3px solid #fff;
 }
-.footer ul li a {
-    padding: 0 0 12px 0;
-    display: block;
-}
-.footer a {
-    color: #337ab7;
-    font-weight: lighter;
-}
 
-.footer p {
-    color: #337ab7;
-    font-weight: lighter;
-
-}
-
-.footer a:hover {
-    text-decoration:none;
-    font-weight: bold;
-}
 .supportLi h4 {
     font-size: 20px;
     font-weight: lighter;
@@ -69,8 +44,6 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
-    color: white;
     text-align: center;
 }
 .footer a {
@@ -87,9 +60,7 @@
     padding-top: 6px;
     font-size: 0.75em
 }
-body {
-    background-color:  #eee;
-}
+
 .title {
 
     margin-bottom: 50px;
@@ -163,21 +134,10 @@ body {
 
 }
 
-
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-/* Custom page header */
 .header {
     border-bottom: 1px solid #e5e5e5;
 }
-/* Make the masthead heading the same height as the navigation */
+
 .header h3 {
     padding-bottom: 19px;
     margin-top: 0;
@@ -185,14 +145,7 @@ body {
     line-height: 40px;
 }
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
 
-/* Customize container */
 @media (min-width: 768px) {
     .container {
         max-width: 730px;
@@ -202,7 +155,6 @@ body {
     margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
 .jumbotron {
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
@@ -212,7 +164,6 @@ body {
     font-size: 21px;
 }
 
-/* Supporting marketing content */
 .marketing {
     margin: 40px 0;
 }
@@ -220,20 +171,12 @@ body {
     margin-top: 28px;
 }
 
-/* Responsive: Portrait tablets and up */
+
 @media screen and (min-width: 768px) {
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-right: 0;
-        padding-left: 0;
-    }
-    /* Space out the masthead */
-    .header {
+   .header {
         margin-bottom: 30px;
     }
-    /* Remove the bottom border on the jumbotron for visual effect */
+   
     .jumbotron {
         border-bottom: 0;
     }

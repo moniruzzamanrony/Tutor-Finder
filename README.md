@@ -11,7 +11,7 @@
 #
 #### Admin Panel
 ###### Username : admin
-######Password: Admin
+###### Password: Admin
 # 
 ### Project View :
 Index Page

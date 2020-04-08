@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Online Tutor Finder</title>
+  <link rel="icon" href="../images/teacher.png" type="image/icon type">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,8 +21,8 @@
         <li class="active"><a href="index.php">Newsfeed</a></li>
         <li><a href="search.php">Search Tutor</a></li>
         <li><a href="add-post.php">Post</a></li>
-        <li><a href="connect.php">Connect</a></li>
-        <li><a href="about.php">About</a></li>
+        <li><a href="#">Connect</a></li>
+        <li><a href="#">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="signUp.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -98,10 +99,8 @@ if (isset($_POST['submit'])) {
 
     $mail = $_POST['mail'];
     $password= md5($_POST['password']);  
-    
-     $sql="select * from user where email='$mail' and password= '$password';";
-
-      $res=mysqli_query($conn,$sql);
+    $sql="select * from user where email='$mail' and password= '$password';";
+    $res=mysqli_query($conn,$sql);
 
       if (mysqli_num_rows($res) > 0) {
         $row = mysqli_fetch_assoc($res);
@@ -109,17 +108,15 @@ if (isset($_POST['submit'])) {
          $userId = $row['userId'];
          $userName = $row['name'];
          session_start();
-          $_SESSION['loggedin'] = true;
-          $_SESSION['userId'] = $userId;
-           $_SESSION['userName'] = $userName;
-           ?>
-         <script> location.replace("home.php"); </script>
-              <?php
-     $conn->close();
-}
-else
-{
- echo "<script type='text/javascript'>alert('Wrong uemail or password');</script>";
-}
-}
+         $_SESSION['loggedin'] = true;
+         $_SESSION['userId'] = $userId;
+         $_SESSION['userName'] = $userName;
+         ?><script> location.replace("home.php"); </script><?php
+         $conn->close();
+      }
+      else
+      {
+       echo "<script type='text/javascript'>alert('Wrong uemail or password');</script>";
+      }
+  }
 ?>

@@ -24,8 +24,8 @@
         <li class="active"><a href="index.php">Newsfeed</a></li>
         <li><a href="search.php">Search Tutor</a></li>
         <li><a href="add-post.php">Post</a></li>
-        <li><a href="connect.php">Connect</a></li>
-        <li><a href="about.php">About</a></li>
+        <li><a href="#">Connect</a></li>
+        <li><a href="#">About</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <li><a href="signUp.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -82,7 +82,7 @@ if ($result->num_rows > 0) {?>
               </tbody>
             </table>
 
-            <a href="check-logged.php?page=login.php" class="btn btn-success btn-sm">Apply Now</a>
+            <a href="check-logged.php?postId=<?php  echo "" . $row["userId"]. " ";?>" class="btn btn-success btn-sm">Apply Now</a>
           </div>       
         </div>
         <div class="col-sm-3">
@@ -115,3 +115,6 @@ if ($result->num_rows > 0) {?>
 
 </body>
 </html>
+<?php
+
+?>

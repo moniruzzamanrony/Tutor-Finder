@@ -20,8 +20,8 @@
         <li class="active"><a href="index.php">Newsfeed</a></li>
         <li><a href="search.php">Search Tutor</a></li>
         <li><a href="add-post.php">Post</a></li>
-        <li><a href="connect.php">Connect</a></li>
-        <li><a href="about.php">About</a></li>
+        <li><a href="#">Connect</a></li>
+        <li><a href="#">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="signUp.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
